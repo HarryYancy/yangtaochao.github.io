@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Test</title>
+    <url>/2022/08/03/Test/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>第二章</title>
     <url>/2022/08/02/%E7%AC%AC%E4%B8%89%E7%AB%A0/</url>
     <content><![CDATA[<h1 id="3-1-判断"><a href="#3-1-判断" class="headerlink" title="3.1 判断"></a>3.1 判断</h1><p>关系运算的结果只有1（符合条件）和0（不符合条件)</p>
-<p><img data-src="https://gitee.com/HarryYangAo/images/raw/master/image/5.png"></p>
-<p><img data-src="https://gitee.com/HarryYangAo/images/raw/master/image/6.png"></p>
+<p><img data-src="/%E7%AC%AC%E4%B8%89%E7%AB%A0/5.png" alt="5"></p>
+<p><img data-src="/%E7%AC%AC%E4%B8%89%E7%AB%A0/6.png" alt="6"></p>
 ]]></content>
       <categories>
         <category>C</category>
@@ -28,7 +33,7 @@
 
 <p><em>TIPs：输入scanf变量时记得加””&amp;””</em></p>
 <p>7*-9*10</p>
-<h1 id="2-2-表达式"><a href="#2-2-表达式" class="headerlink" title="2.2 表达式"></a>2.2 表达式</h1><h2 id="复合运算符-x3D-x3D-x3D-x2F-x3D"><a href="#复合运算符-x3D-x3D-x3D-x2F-x3D" class="headerlink" title="复合运算符 +&#x3D; -&#x3D; *&#x3D; &#x2F;&#x3D;"></a>复合运算符 +&#x3D; -&#x3D; *&#x3D; &#x2F;&#x3D;</h2><p><img data-src="https://gitee.com/HarryYangAo/images/raw/master/image/4.png"></p>
+<h1 id="2-2-表达式"><a href="#2-2-表达式" class="headerlink" title="2.2 表达式"></a>2.2 表达式</h1><h2 id="复合运算符-x3D-x3D-x3D-x2F-x3D"><a href="#复合运算符-x3D-x3D-x3D-x2F-x3D" class="headerlink" title="复合运算符 +&#x3D; -&#x3D; *&#x3D; &#x2F;&#x3D;"></a>复合运算符 +&#x3D; -&#x3D; *&#x3D; &#x2F;&#x3D;</h2><p><img data-src="/%E7%AC%AC%E4%BA%8C%E7%AB%A0/4.png" alt="4"></p>
 ]]></content>
       <categories>
         <category>C</category>
