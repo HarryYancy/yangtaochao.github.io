@@ -1,19 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Test</title>
-    <url>/2022/07/29/Test/</url>
-    <content><![CDATA[<p>Test</p>
-<p>Test</p>
-<span id="more"></span>
+    <title>第二章</title>
+    <url>/2022/08/02/%E7%AC%AC%E4%B8%89%E7%AB%A0/</url>
+    <content><![CDATA[<h1 id="3-1-判断"><a href="#3-1-判断" class="headerlink" title="3.1 判断"></a>3.1 判断</h1><p>关系运算的结果只有1（符合条件）和0（不符合条件)</p>
+<p><img data-src="https://gitee.com/HarryYangAo/images/raw/master/image/5.png"></p>
+<p><img data-src="https://gitee.com/HarryYangAo/images/raw/master/image/6.png"></p>
 ]]></content>
       <categories>
-        <category>Test1</category>
-        <category>Test3</category>
-        <category>Test2</category>
+        <category>C</category>
+        <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>Test</tag>
+        <tag>C Learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第二章</title>
+    <url>/2022/08/01/%E7%AC%AC%E4%BA%8C%E7%AB%A0/</url>
+    <content><![CDATA[<h1 id="2-1-变量"><a href="#2-1-变量" class="headerlink" title="2.1 变量"></a>2.1 变量</h1><p>有效变量名满足的条件:</p>
+<ol>
+<li>不是关键字</li>
+<li>开头不能是数字</li>
+<li>只能由英文字母数字和下划线组成（不是-,而是_）</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">输入浮点数 <span class="built_in">scanf</span>(<span class="string">&quot;%lf&quot;</span>,&amp;a)</span><br><span class="line">输出浮点数 <span class="built_in">printf</span>(<span class="string">&quot;%f&quot;</span>,a)</span><br></pre></td></tr></table></figure>
+
+<p><em>TIPs：输入scanf变量时记得加””&amp;””</em></p>
+<p>7*-9*10</p>
+<h1 id="2-2-表达式"><a href="#2-2-表达式" class="headerlink" title="2.2 表达式"></a>2.2 表达式</h1><h2 id="复合运算符-x3D-x3D-x3D-x2F-x3D"><a href="#复合运算符-x3D-x3D-x3D-x2F-x3D" class="headerlink" title="复合运算符 +&#x3D; -&#x3D; *&#x3D; &#x2F;&#x3D;"></a>复合运算符 +&#x3D; -&#x3D; *&#x3D; &#x2F;&#x3D;</h2><p><img data-src="https://gitee.com/HarryYangAo/images/raw/master/image/4.png"></p>
+]]></content>
+      <categories>
+        <category>C</category>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>C Learning</tag>
       </tags>
   </entry>
 </search>
