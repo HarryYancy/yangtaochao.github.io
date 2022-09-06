@@ -23,22 +23,29 @@
     var CONFIG = {"hostname":"yangtaochao.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"livere","storage":true,"lazyload":true,"nav":null,"activeClass":"livere"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="2.1 变量有效变量名满足的条件:  不是关键字 开头不能是数字 只能由英文字母数字和下划线组成（不是-,而是_）  12输入浮点数 scanf(&quot;%lf&quot;,&amp;a)输出浮点数 printf(&quot;%f&quot;,a)  TIPs：输入scanf变量时记得加””&amp;”” 7*-9*10 2.2 表达式复合运算符 +&#x3D; -&#x3D; *&#x3D;">
+  <meta name="description" content="10.1 字符串         %s输入输出字符串，输入时候读到空格tab或者回车为止   指针必须初始化 数组结构  10.2  字符串函数char *a[]   程序输入原理    strlen函数1strlen(数组名) 输出数组长度  strcpy函数">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第二章">
-<meta property="og:url" content="http://yangtaochao.github.io/2022/08/01/%E7%AC%AC%E4%BA%8C%E7%AB%A0/index.html">
+<meta property="og:title" content="HarryYang的个人主页">
+<meta property="og:url" content="http://yangtaochao.github.io/2022/09/06/%E7%AC%AC%E5%8D%81%E7%AB%A0/index.html">
 <meta property="og:site_name" content="HarryYang的个人主页">
-<meta property="og:description" content="2.1 变量有效变量名满足的条件:  不是关键字 开头不能是数字 只能由英文字母数字和下划线组成（不是-,而是_）  12输入浮点数 scanf(&quot;%lf&quot;,&amp;a)输出浮点数 printf(&quot;%f&quot;,a)  TIPs：输入scanf变量时记得加””&amp;”” 7*-9*10 2.2 表达式复合运算符 +&#x3D; -&#x3D; *&#x3D;">
+<meta property="og:description" content="10.1 字符串         %s输入输出字符串，输入时候读到空格tab或者回车为止   指针必须初始化 数组结构  10.2  字符串函数char *a[]   程序输入原理    strlen函数1strlen(数组名) 输出数组长度  strcpy函数">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://s2.loli.net/2022/08/03/Tae2JjB7LCZE9gS.png">
-<meta property="article:published_time" content="2022-08-01T07:28:32.913Z">
-<meta property="article:modified_time" content="2022-08-03T08:50:04.863Z">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sh6krharj30um0lrdkr.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5shirp5e5j30tk0iodiw.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5shn3c9nhj31820o5qb5.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5shpiz4zpj30qb0m3n0d.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5si1g1ijqj30t30k4gop.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5si9g11sxj30zk1hn4ft.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sihbxgdzj318k0hotey.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5siwa7haaj31030p5jz5.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5t70xsy9wj30vx0ktq5i.jpg">
+<meta property="article:published_time" content="2022-09-06T03:23:44.817Z">
+<meta property="article:modified_time" content="2022-09-03T05:18:36.425Z">
 <meta property="article:author" content="HarryYang">
-<meta property="article:tag" content="C Learning">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s2.loli.net/2022/08/03/Tae2JjB7LCZE9gS.png">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sh6krharj30um0lrdkr.jpg">
 
-<link rel="canonical" href="http://yangtaochao.github.io/2022/08/01/%E7%AC%AC%E4%BA%8C%E7%AB%A0/">
+<link rel="canonical" href="http://yangtaochao.github.io/2022/09/06/%E7%AC%AC%E5%8D%81%E7%AB%A0/">
 
 
 <script id="page-configurations">
@@ -51,7 +58,7 @@
   };
 </script>
 
-  <title>第二章 | HarryYang的个人主页</title>
+  <title> | HarryYang的个人主页</title>
   
 
 
@@ -196,7 +203,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yangtaochao.github.io/2022/08/01/%E7%AC%AC%E4%BA%8C%E7%AB%A0/">
+    <link itemprop="mainEntityOfPage" href="http://yangtaochao.github.io/2022/09/06/%E7%AC%AC%E5%8D%81%E7%AB%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -209,7 +216,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          第二章
+          
         </h1>
 
         <div class="post-meta">
@@ -220,28 +227,15 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2022-08-01 15:28:32" itemprop="dateCreated datePublished" datetime="2022-08-01T15:28:32+08:00">2022-08-01</time>
+              <time title="创建时间：2022-09-06 11:23:44" itemprop="dateCreated datePublished" datetime="2022-09-06T11:23:44+08:00">2022-09-06</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-08-03 16:50:04" itemprop="dateModified" datetime="2022-08-03T16:50:04+08:00">2022-08-03</time>
+                <time title="修改时间：2022-09-03 13:18:36" itemprop="dateModified" datetime="2022-09-03T13:18:36+08:00">2022-09-03</time>
               </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-                </span>
-            </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -256,7 +250,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>195</span>
+              <span>102</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -275,17 +269,32 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="2-1-变量"><a href="#2-1-变量" class="headerlink" title="2.1 变量"></a>2.1 变量</h1><p>有效变量名满足的条件:</p>
-<ol>
-<li>不是关键字</li>
-<li>开头不能是数字</li>
-<li>只能由英文字母数字和下划线组成（不是-,而是_）</li>
-</ol>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入浮点数 <span class="built_in">scanf</span>(<span class="string">&quot;%lf&quot;</span>,&amp;a)</span><br><span class="line">输出浮点数 <span class="built_in">printf</span>(<span class="string">&quot;%f&quot;</span>,a)</span><br></pre></td></tr></table></figure>
+        <h1 id="10-1-字符串"><a href="#10-1-字符串" class="headerlink" title="10.1 字符串"></a>10.1 字符串</h1><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sh6krharj30um0lrdkr.jpg" alt="image.png" style="zoom: 33%;" />
 
-<p><em>TIPs：输入scanf变量时记得加””&amp;””</em></p>
-<p>7*-9*10</p>
-<h1 id="2-2-表达式"><a href="#2-2-表达式" class="headerlink" title="2.2 表达式"></a>2.2 表达式</h1><h2 id="复合运算符-x3D-x3D-x3D-x2F-x3D"><a href="#复合运算符-x3D-x3D-x3D-x2F-x3D" class="headerlink" title="复合运算符 +&#x3D; -&#x3D; *&#x3D; &#x2F;&#x3D;"></a>复合运算符 +&#x3D; -&#x3D; *&#x3D; &#x2F;&#x3D;</h2><p><img data-src="https://s2.loli.net/2022/08/03/Tae2JjB7LCZE9gS.png"></p>
+<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5shirp5e5j30tk0iodiw.jpg" alt="image.png" style="zoom:50%;" />
+
+<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5shn3c9nhj31820o5qb5.jpg" alt="image.png" style="zoom:33%;" />
+
+<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5shpiz4zpj30qb0m3n0d.jpg" alt="image.png" style="zoom:50%;" />
+
+<ul>
+<li><p>%s输入输出字符串，输入时候读到空格tab或者回车为止</p>
+<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5si1g1ijqj30t30k4gop.jpg" alt="image.png" style="zoom:50%;" />
+
+<p>指针必须初始化</p>
+<h2 id="数组结构"><a href="#数组结构" class="headerlink" title="数组结构"></a>数组结构</h2><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5si9g11sxj30zk1hn4ft.jpg" alt="image.png" style="zoom: 50%;" />
+
+<h1 id="10-2-字符串函数"><a href="#10-2-字符串函数" class="headerlink" title="10.2  字符串函数"></a>10.2  字符串函数</h1><h2 id="char-a"><a href="#char-a" class="headerlink" title="char *a[]"></a>char *a[]</h2><p><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sihbxgdzj318k0hotey.jpg" alt="image.png"></p>
+</li>
+</ul>
+<h2 id="程序输入原理"><a href="#程序输入原理" class="headerlink" title="程序输入原理"></a>程序输入原理</h2><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5siwa7haaj31030p5jz5.jpg" alt="image.png" style="zoom:50%;" />
+
+
+
+<h2 id="strlen函数"><a href="#strlen函数" class="headerlink" title="strlen函数"></a>strlen函数</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">strlen</span>(数组名) 输出数组长度</span><br></pre></td></tr></table></figure>
+
+<h2 id="strcpy函数"><a href="#strcpy函数" class="headerlink" title="strcpy函数"></a>strcpy函数</h2><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5t70xsy9wj30vx0ktq5i.jpg" alt="image.png" style="zoom:50%;" />
+
 
     </div>
 
@@ -311,7 +320,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yangtaochao.github.io/2022/08/01/%E7%AC%AC%E4%BA%8C%E7%AB%A0/" title="第二章">http://yangtaochao.github.io/2022/08/01/第二章/</a>
+    <a href="http://yangtaochao.github.io/2022/09/06/%E7%AC%AC%E5%8D%81%E7%AB%A0/" title="">http://yangtaochao.github.io/2022/09/06/第十章/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -321,19 +330,19 @@
 
 
       <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/C-Learning/" rel="tag"># C Learning</a>
-          </div>
 
         
 
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2022/08/02/%E7%AC%AC%E4%B8%89%E7%AB%A0/" rel="next" title="第三章">
-      第三章 <i class="fa fa-chevron-right"></i>
+    <a href="/2022/09/06/%E7%AC%AC%E5%9B%9B%E7%AB%A0/" rel="prev" title="第四章">
+      <i class="fa fa-chevron-left"></i> 第四章
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/09/06/%E7%AC%AC%E5%85%AD%E7%AB%A0/" rel="next" title="第六章">
+      第六章 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -398,7 +407,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2-1-%E5%8F%98%E9%87%8F"><span class="nav-number">1.</span> <span class="nav-text">2.1 变量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-2-%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">2.2 表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E5%90%88%E8%BF%90%E7%AE%97%E7%AC%A6-x3D-x3D-x3D-x2F-x3D"><span class="nav-number">2.1.</span> <span class="nav-text">复合运算符 +&#x3D; -&#x3D; *&#x3D; &#x2F;&#x3D;</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#10-1-%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">1.</span> <span class="nav-text">10.1 字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E7%BB%93%E6%9E%84"><span class="nav-number">1.1.</span> <span class="nav-text">数组结构</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#10-2-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%87%BD%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text">10.2  字符串函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#char-a"><span class="nav-number">2.1.</span> <span class="nav-text">char *a[]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E8%BE%93%E5%85%A5%E5%8E%9F%E7%90%86"><span class="nav-number">2.2.</span> <span class="nav-text">程序输入原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#strlen%E5%87%BD%E6%95%B0"><span class="nav-number">2.3.</span> <span class="nav-text">strlen函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#strcpy%E5%87%BD%E6%95%B0"><span class="nav-number">2.4.</span> <span class="nav-text">strcpy函数</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

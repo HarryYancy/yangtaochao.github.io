@@ -2,7 +2,71 @@
 <search>
   <entry>
     <title></title>
-    <url>/2022/09/03/%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0/</url>
+    <url>/2022/09/06/%E7%AC%AC%E5%85%AB%E7%AB%A0/</url>
+    <content><![CDATA[<h1 id="8-1-数组"><a href="#8-1-数组" class="headerlink" title="8.1 数组"></a>8.1 数组</h1><ul>
+<li>是一种容器（放东西的东西），特点是：</li>
+<li>其中所有的元素具有相同的数据类型</li>
+<li>一旦创建，不能改变大小</li>
+<li>（数据中的元素在内存中是连续依次排列的）</li>
+</ul>
+<h4 id="必须认为检查数组是否越界"><a href="#必须认为检查数组是否越界" class="headerlink" title="必须认为检查数组是否越界"></a>必须认为检查数组是否越界</h4>]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/09/06/%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0/</url>
+    <content><![CDATA[<h1 id="11-1-枚举"><a href="#11-1-枚举" class="headerlink" title="11.1 枚举"></a>11.1 枚举</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> 枚举类型名 &#123;</span>名称, , , &#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>枚举量可以作为值</p>
+</li>
+<li><p>枚举类型可以跟上enum作为类型</p>
+</li>
+<li><p>实际上是以整数（int）来做内部计算和外部输入输出的</p>
+<h5 id="套路：在enum最后加入一个变量，实现自动计数"><a href="#套路：在enum最后加入一个变量，实现自动计数" class="headerlink" title="套路：在enum最后加入一个变量，实现自动计数"></a><em>套路：在enum最后加入一个变量，实现自动计数</em></h5></li>
+</ul>
+<h1 id="11-2-结构"><a href="#11-2-结构" class="headerlink" title="11.2 结构"></a>11.2 结构</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> 结构名字 &#123;</span>成员变量&#125;;<span class="comment">//声明结构类型</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> 结构名字 变量名字;</span><span class="comment">//声明结构变量</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="type">int</span> x;</span><br><span class="line">    ...</span><br><span class="line">&#125; p1,p2;</span><br><span class="line">该结构没有名字，p1,p2为该结构的两个变量.</span><br><span class="line">变量名字.成员变量。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> 结构名字 变量名字 =</span> &#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> 结构名字 变量名字 =</span> &#123;.成员变量=值&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="数组与结构的区别："><a href="#数组与结构的区别：" class="headerlink" title="数组与结构的区别："></a>数组与结构的区别：</h4><ol>
+<li>数组变量类型必须一样，而结构不必</li>
+<li>数组用[]运算符和下标访问其成员</li>
+<li>结构用.运算符和名字访问其成员</li>
+<li><em><strong>结构变量的名字并不是其地址</strong></em></li>
+</ol>
+<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5thjftfpzj30ri0l9gqg.jpg" alt="image.png" style="zoom:50%;" />
+
+<h2 id="结构与函数"><a href="#结构与函数" class="headerlink" title="结构与函数"></a>结构与函数</h2><p>结构可以作为函数参数</p>
+<h2 id="输入并传输结构进入函数"><a href="#输入并传输结构进入函数" class="headerlink" title="输入并传输结构进入函数"></a>输入并传输结构进入函数</h2><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5ti2vq3jbj30s20ky78b.jpg" alt="image.png" style="zoom:50%;" />
+
+<h1 id="11-3-联合"><a href="#11-3-联合" class="headerlink" title="11.3 联合"></a>11.3 联合</h1><h3 id="typedef-自定义类型"><a href="#typedef-自定义类型" class="headerlink" title="typedef 自定义类型"></a>typedef 自定义类型</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Length;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>这样使得<strong>Length</strong>成为<strong>int</strong>类型的别名。<br>这样，Length可以代替int 出现在变量定义和参数声明的地方</li>
+</ul>
+<h3 id="union"><a href="#union" class="headerlink" title="union"></a>union</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">union</span> <span class="title">AnElt</span> &#123;</span></span><br><span class="line"><span class="type">int</span>   i;</span><br><span class="line"><span class="type">char</span>  c;</span><br><span class="line">&#125; elt1, elt2;</span><br><span class="line">elt1.i = <span class="number">4</span>;</span><br><span class="line">elt2.c = ’a’;</span><br><span class="line">elt2.i = <span class="number">0xDEADBEEF</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>存储<ul>
+<li>只为最大的成员分配空间</li>
+<li>所有的成员共享⼀一个空间</li>
+<li>同⼀一时间只有⼀一个成员是有效的</li>
+<li>union的⼤大⼩小是其最⼤大的成员</li>
+</ul>
+</li>
+<li>初始化<ul>
+<li>对第⼀一个成员做初始化</li>
+</ul>
+</li>
+</ul>
+<h4 id="应用："><a href="#应用：" class="headerlink" title="应用："></a>应用：</h4><ul>
+<li>用来查看内存储存变量的实际方式</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/09/06/%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0/</url>
     <content><![CDATA[<h1 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h1><ul>
 <li><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tmae3nj0j30pu0kadii.jpg" alt="image.png" style="zoom: 33%;" />										
 
@@ -96,183 +160,8 @@
 ]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/2022/09/03/%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0/</url>
-    <content><![CDATA[<h1 id="11-1-枚举"><a href="#11-1-枚举" class="headerlink" title="11.1 枚举"></a>11.1 枚举</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> 枚举类型名 &#123;</span>名称, , , &#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>枚举量可以作为值</p>
-</li>
-<li><p>枚举类型可以跟上enum作为类型</p>
-</li>
-<li><p>实际上是以整数（int）来做内部计算和外部输入输出的</p>
-<h5 id="套路：在enum最后加入一个变量，实现自动计数"><a href="#套路：在enum最后加入一个变量，实现自动计数" class="headerlink" title="套路：在enum最后加入一个变量，实现自动计数"></a><em>套路：在enum最后加入一个变量，实现自动计数</em></h5></li>
-</ul>
-<h1 id="11-2-结构"><a href="#11-2-结构" class="headerlink" title="11.2 结构"></a>11.2 结构</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> 结构名字 &#123;</span>成员变量&#125;;<span class="comment">//声明结构类型</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> 结构名字 变量名字;</span><span class="comment">//声明结构变量</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="type">int</span> x;</span><br><span class="line">    ...</span><br><span class="line">&#125; p1,p2;</span><br><span class="line">该结构没有名字，p1,p2为该结构的两个变量.</span><br><span class="line">变量名字.成员变量。</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> 结构名字 变量名字 =</span> &#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> 结构名字 变量名字 =</span> &#123;.成员变量=值&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="数组与结构的区别："><a href="#数组与结构的区别：" class="headerlink" title="数组与结构的区别："></a>数组与结构的区别：</h4><ol>
-<li>数组变量类型必须一样，而结构不必</li>
-<li>数组用[]运算符和下标访问其成员</li>
-<li>结构用.运算符和名字访问其成员</li>
-<li><em><strong>结构变量的名字并不是其地址</strong></em></li>
-</ol>
-<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5thjftfpzj30ri0l9gqg.jpg" alt="image.png" style="zoom:50%;" />
-
-<h2 id="结构与函数"><a href="#结构与函数" class="headerlink" title="结构与函数"></a>结构与函数</h2><p>结构可以作为函数参数</p>
-<h2 id="输入并传输结构进入函数"><a href="#输入并传输结构进入函数" class="headerlink" title="输入并传输结构进入函数"></a>输入并传输结构进入函数</h2><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5ti2vq3jbj30s20ky78b.jpg" alt="image.png" style="zoom:50%;" />
-
-<h1 id="11-3-联合"><a href="#11-3-联合" class="headerlink" title="11.3 联合"></a>11.3 联合</h1><h3 id="typedef-自定义类型"><a href="#typedef-自定义类型" class="headerlink" title="typedef 自定义类型"></a>typedef 自定义类型</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Length;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>这样使得<strong>Length</strong>成为<strong>int</strong>类型的别名。<br>这样，Length可以代替int 出现在变量定义和参数声明的地方</li>
-</ul>
-<h3 id="union"><a href="#union" class="headerlink" title="union"></a>union</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">union</span> <span class="title">AnElt</span> &#123;</span></span><br><span class="line"><span class="type">int</span>   i;</span><br><span class="line"><span class="type">char</span>  c;</span><br><span class="line">&#125; elt1, elt2;</span><br><span class="line">elt1.i = <span class="number">4</span>;</span><br><span class="line">elt2.c = ’a’;</span><br><span class="line">elt2.i = <span class="number">0xDEADBEEF</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>存储<ul>
-<li>只为最大的成员分配空间</li>
-<li>所有的成员共享⼀一个空间</li>
-<li>同⼀一时间只有⼀一个成员是有效的</li>
-<li>union的⼤大⼩小是其最⼤大的成员</li>
-</ul>
-</li>
-<li>初始化<ul>
-<li>对第⼀一个成员做初始化</li>
-</ul>
-</li>
-</ul>
-<h4 id="应用："><a href="#应用：" class="headerlink" title="应用："></a>应用：</h4><ul>
-<li>用来查看内存储存变量的实际方式</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/09/02/%E7%AC%AC%E5%8D%81%E7%AB%A0/</url>
-    <content><![CDATA[<h1 id="10-1-字符串"><a href="#10-1-字符串" class="headerlink" title="10.1 字符串"></a>10.1 字符串</h1><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sh6krharj30um0lrdkr.jpg" alt="image.png" style="zoom: 33%;" />
-
-<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5shirp5e5j30tk0iodiw.jpg" alt="image.png" style="zoom:50%;" />
-
-<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5shn3c9nhj31820o5qb5.jpg" alt="image.png" style="zoom:33%;" />
-
-<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5shpiz4zpj30qb0m3n0d.jpg" alt="image.png" style="zoom:50%;" />
-
-<ul>
-<li><p>%s输入输出字符串，输入时候读到空格tab或者回车为止</p>
-<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5si1g1ijqj30t30k4gop.jpg" alt="image.png" style="zoom:50%;" />
-
-<p>指针必须初始化</p>
-<h2 id="数组结构"><a href="#数组结构" class="headerlink" title="数组结构"></a>数组结构</h2><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5si9g11sxj30zk1hn4ft.jpg" alt="image.png" style="zoom: 50%;" />
-
-<h1 id="10-2-字符串函数"><a href="#10-2-字符串函数" class="headerlink" title="10.2  字符串函数"></a>10.2  字符串函数</h1><h2 id="char-a"><a href="#char-a" class="headerlink" title="char *a[]"></a>char *a[]</h2><p><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sihbxgdzj318k0hotey.jpg" alt="image.png"></p>
-</li>
-</ul>
-<h2 id="程序输入原理"><a href="#程序输入原理" class="headerlink" title="程序输入原理"></a>程序输入原理</h2><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5siwa7haaj31030p5jz5.jpg" alt="image.png" style="zoom:50%;" />
-
-
-
-<h2 id="strlen函数"><a href="#strlen函数" class="headerlink" title="strlen函数"></a>strlen函数</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">strlen</span>(数组名) 输出数组长度</span><br></pre></td></tr></table></figure>
-
-<h2 id="strcpy函数"><a href="#strcpy函数" class="headerlink" title="strcpy函数"></a>strcpy函数</h2><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5t70xsy9wj30vx0ktq5i.jpg" alt="image.png" style="zoom:50%;" />
-
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/09/02/%E8%A1%A5%E5%85%85/</url>
-    <content><![CDATA[<h1 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h1><ol>
-<li>自动存储期限 从声明，到函数结束</li>
-<li>块作用域 {}</li>
-</ol>
-<h3 id="静态局部变量"><a href="#静态局部变量" class="headerlink" title="静态局部变量"></a>静态局部变量</h3><p>static 可以使函数拥有永久的存储单位，该程序运行期间一直保留其值,期限为整个程序运行期间<br>但其他函数无法访问它</p>
-<h3 id="形式参数同局部变量"><a href="#形式参数同局部变量" class="headerlink" title="形式参数同局部变量"></a>形式参数同局部变量</h3><h1 id="外部变量（全局变量）"><a href="#外部变量（全局变量）" class="headerlink" title="外部变量（全局变量）"></a>外部变量（全局变量）</h1><ol>
-<li>外部变量是声明在任何函数体之外的</li>
-<li>静态存储期限，</li>
-<li>文件作用域，作用域从声明开始到文件的末尾,一直可访问&#96;&#96;&#96;&#96;&#96;&#96;&#96;</li>
-</ol>
-<h3 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h3><ul>
-<li>压栈(push)：在栈顶加入一个数据项</li>
-<li>出栈(pop)：从栈顶删除一个数据项</li>
-</ul>
-<p>无法对不在栈顶的数据项进行修改</p>
-<h5 id="在C中实现栈"><a href="#在C中实现栈" class="headerlink" title="在C中实现栈"></a>在C中实现栈</h5><p><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sdbm412zj30sw0enqc9.jpg" alt="image.png"></p>
-<p>通过#if #ifdef来调试</p>
-<p><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tgx4557xj30sv0apacf.jpg" alt="image.png"></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">if</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">else</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">if</span> XXX</span></span><br><span class="line"><span class="meta">#<span class="keyword">elif</span> XX</span></span><br><span class="line"><span class="meta">#<span class="keyword">error</span> XXX</span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/09/01/%E7%AC%AC%E4%B9%9D%E7%AB%A0/</url>
-    <content><![CDATA[<h1 id="9-1-指针"><a href="#9-1-指针" class="headerlink" title="9.1 指针"></a>9.1 指针</h1><ul>
-<li><p>%p表示输出变量的地址 </p>
-</li>
-<li><p>&amp;取地址符，取出变量的地址</p>
-<p>地址的大小是否于int相等取决于编译器</p>
-</li>
-<li><h2 id="定义：就是保存地址的变量"><a href="#定义：就是保存地址的变量" class="headerlink" title="定义：就是保存地址的变量"></a>定义：就是保存地址的变量</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> *p,q;<span class="type">int</span> *p,q;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>两种语句都是表示只有p是指针，q是int</strong></p>
-</li>
-<li><h3 id="指针的作用：在代码块里面访问外面的变量"><a href="#指针的作用：在代码块里面访问外面的变量" class="headerlink" title="指针的作用：在代码块里面访问外面的变量"></a>指针的作用：在代码块里面访问外面的变量</h3><p>*加地址，可以访问地址上的变量(*是单目运算符)</p>
-<p>*p既可以给其他变量赋值，也可以被赋值</p>
-</li>
-</ul>
-<p>*<em>与&amp;互为逆运算</em></p>
-<ul>
-<li><p>传入函数的数组就是指针<br>sizeof(a) &#x3D;&#x3D; sizeof(int*)<br>但是这个指针可以 用运算符[]进行运算</p>
-<h3 id="数组变量是特殊的指针"><a href="#数组变量是特殊的指针" class="headerlink" title="数组变量是特殊的指针"></a>数组变量是特殊的指针</h3><ul>
-<li>数组变量 是 Const的指针</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> * <span class="type">const</span> p表示定义不可修改的指针</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> *p =&amp;i或者<span class="type">int</span> <span class="type">const</span> *p表示无法通过*p给所指变量赋值,</span><br><span class="line">而所指变量本身能被赋值,即*p = <span class="number">1</span>不可以; 而i =<span class="number">1</span>可以</span><br></pre></td></tr></table></figure>
-
-<p><em>const在*前，为第二种 ，在*后，为第一种</em></p>
-<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5s9yg12xvj30x80jwjvz.jpg" alt="image.png" style="zoom: 33%;" />
-
-<ul>
-<li>const 数组名表示数组里的元素全为const变量</li>
-</ul>
-<h1 id="9-2-指针运算"><a href="#9-2-指针运算" class="headerlink" title="9.2 指针运算"></a>9.2 指针运算</h1><p>指针+1移动到下一个储存变量的位置</p>
-<p>指针与指针相加减的结果是中间变量的个数</p>
-<ul>
-<li>*p++意思是取出p所指的数据，之后再把p移到下一个位置<br>*p++可以只对应一条汇编指令，使得程序跑得快</li>
-</ul>
-<p>指针比较:数组中的单元的地址是线性递增的<br><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sbj5weunj30qb0l2tdr.jpg" alt="image.png" style="zoom:50%;" /></p>
-<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sbn5a28sj30s90lngr3.jpg" alt="image.png" style="zoom: 33%;" />
-
-<p><em>数组名没法运算</em></p>
-<h1 id="指针的作用"><a href="#指针的作用" class="headerlink" title="指针的作用"></a>指针的作用</h1><ol>
-<li>传入较大数据作为参数</li>
-<li>传入数组后对数组做操作</li>
-<li>函数返回不止一个结果</li>
-<li>需要用函数来修改不止一个变量</li>
-<li><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sby415suj30re0k8gos.jpg" alt="image.png" style="zoom:50%;" />
-没空间会返回0
-***malloc之后一定要free***</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/08/30/%E7%AC%AC%E5%85%AB%E7%AB%A0/</url>
-    <content><![CDATA[<h1 id="8-1-数组"><a href="#8-1-数组" class="headerlink" title="8.1 数组"></a>8.1 数组</h1><ul>
-<li>是一种容器（放东西的东西），特点是：</li>
-<li>其中所有的元素具有相同的数据类型</li>
-<li>一旦创建，不能改变大小</li>
-<li>（数据中的元素在内存中是连续依次排列的）</li>
-</ul>
-<h4 id="必须认为检查数组是否越界"><a href="#必须认为检查数组是否越界" class="headerlink" title="必须认为检查数组是否越界"></a>必须认为检查数组是否越界</h4>]]></content>
-  </entry>
-  <entry>
     <title>第六章</title>
-    <url>/2022/08/27/%E7%AC%AC%E5%85%AD%E7%AB%A0/</url>
+    <url>/2022/09/06/%E7%AC%AC%E5%85%AD%E7%AB%A0/</url>
     <content><![CDATA[<h1 id="6-1-数据类型"><a href="#6-1-数据类型" class="headerlink" title="6.1 数据类型"></a>6.1 数据类型</h1><h2 id="1-整数"><a href="#1-整数" class="headerlink" title="1) 整数"></a>1) 整数</h2><p><em>bool char short int long ;long long</em></p>
 <p>int 表达的是一个寄存器的大小，</p>
 <h3 id="整数的输出"><a href="#整数的输出" class="headerlink" title="整数的输出"></a>整数的输出</h3><ul>
@@ -352,31 +241,39 @@
       </tags>
   </entry>
   <entry>
-    <title>第五章</title>
-    <url>/2022/08/20/%E7%AC%AC%E4%BA%94%E7%AB%A0/</url>
-    <content><![CDATA[<h1 id="5-1-第三种循环for"><a href="#5-1-第三种循环for" class="headerlink" title="5.1 第三种循环for"></a>5.1 第三种循环for</h1><h2 id="1-for-x3D-对于"><a href="#1-for-x3D-对于" class="headerlink" title="1) for &#x3D; 对于"></a>1) for &#x3D; 对于</h2><p><strong>例如:for(coun&#x3D;10;count&gt;0;count–)</strong></p>
-<p><strong>对于一开始的count&#x3D;10,判断条件，然后做循环体，做完后执行count–,之后再判断……</strong></p>
-<h6 id="TIPS-1-可以在for里面定义变量-该变量只在for中有用"><a href="#TIPS-1-可以在for里面定义变量-该变量只在for中有用" class="headerlink" title="TIPS:1. *可以在for里面定义变量,该变量只在for中有用*"></a>TIPS:1. *可以在for里面定义变量,<strong>该</strong>变量只在for中有用*</h6><h6 id="2-三个表达式中可以省略任意的表达式"><a href="#2-三个表达式中可以省略任意的表达式" class="headerlink" title="2. 三个表达式中可以省略任意的表达式"></a>2. <em>三个表达式中可以省略任意的表达式</em></h6><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(;表达式;)== <span class="keyword">while</span>(表达式)</span><br></pre></td></tr></table></figure>
+    <title></title>
+    <url>/2022/09/06/%E7%AC%AC%E5%8D%81%E7%AB%A0/</url>
+    <content><![CDATA[<h1 id="10-1-字符串"><a href="#10-1-字符串" class="headerlink" title="10.1 字符串"></a>10.1 字符串</h1><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sh6krharj30um0lrdkr.jpg" alt="image.png" style="zoom: 33%;" />
 
-<h2 id="2-for-amp-while-amp-do-while的选择"><a href="#2-for-amp-while-amp-do-while的选择" class="headerlink" title="2) for &amp;while &amp;do_while的选择"></a>2) for &amp;while &amp;do_while的选择</h2><p><img data-src="http://tva1.sinaimg.cn/large/008tG9v6gy1h5g27wgp4ej30oh08bq44.jpg" alt="image.png"></p>
-<h1 id="5-2循环控制"><a href="#5-2循环控制" class="headerlink" title="5.2循环控制"></a>5.2循环控制</h1><h2 id="1-用break-amp-continue控制循环"><a href="#1-用break-amp-continue控制循环" class="headerlink" title="1) 用break&amp;continue控制循环"></a>1) 用break&amp;continue控制循环</h2><p><strong>break:跳出循环</strong></p>
-<p><strong>continue:跳过循环这一轮的语句进入下一轮</strong></p>
-<h2 id="2-goto语句"><a href="#2-goto语句" class="headerlink" title="2)goto语句"></a>2)goto语句</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">goto</span> 标记;</span><br><span class="line">标记:</span><br><span class="line">	语句</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5shirp5e5j30tk0iodiw.jpg" alt="image.png" style="zoom:50%;" />
 
-<p>TIPS:<em><strong>少用GOTO，goto是属于非线性的，用的多了，就会使得程序杂乱无章，难于阅读</strong></em></p>
-<p>​		(<em>有时候确实很好用，高效省事</em>)</p>
+<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5shn3c9nhj31820o5qb5.jpg" alt="image.png" style="zoom:33%;" />
+
+<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5shpiz4zpj30qb0m3n0d.jpg" alt="image.png" style="zoom:50%;" />
+
+<ul>
+<li><p>%s输入输出字符串，输入时候读到空格tab或者回车为止</p>
+<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5si1g1ijqj30t30k4gop.jpg" alt="image.png" style="zoom:50%;" />
+
+<p>指针必须初始化</p>
+<h2 id="数组结构"><a href="#数组结构" class="headerlink" title="数组结构"></a>数组结构</h2><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5si9g11sxj30zk1hn4ft.jpg" alt="image.png" style="zoom: 50%;" />
+
+<h1 id="10-2-字符串函数"><a href="#10-2-字符串函数" class="headerlink" title="10.2  字符串函数"></a>10.2  字符串函数</h1><h2 id="char-a"><a href="#char-a" class="headerlink" title="char *a[]"></a>char *a[]</h2><p><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sihbxgdzj318k0hotey.jpg" alt="image.png"></p>
+</li>
+</ul>
+<h2 id="程序输入原理"><a href="#程序输入原理" class="headerlink" title="程序输入原理"></a>程序输入原理</h2><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5siwa7haaj31030p5jz5.jpg" alt="image.png" style="zoom:50%;" />
+
+
+
+<h2 id="strlen函数"><a href="#strlen函数" class="headerlink" title="strlen函数"></a>strlen函数</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">strlen</span>(数组名) 输出数组长度</span><br></pre></td></tr></table></figure>
+
+<h2 id="strcpy函数"><a href="#strcpy函数" class="headerlink" title="strcpy函数"></a>strcpy函数</h2><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5t70xsy9wj30vx0ktq5i.jpg" alt="image.png" style="zoom:50%;" />
+
 ]]></content>
-      <categories>
-        <category>C</category>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>C Learning</tag>
-      </tags>
   </entry>
   <entry>
     <title>第四章</title>
-    <url>/2022/08/14/%E7%AC%AC%E5%9B%9B%E7%AB%A0/</url>
+    <url>/2022/09/06/%E7%AC%AC%E5%9B%9B%E7%AB%A0/</url>
     <content><![CDATA[<h1 id="4-1循环语句"><a href="#4-1循环语句" class="headerlink" title="4.1循环语句"></a>4.1循环语句</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (条件) &#123;循环体&#125;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">do</span> </span><br><span class="line">&#123;</span><br><span class="line"> 	循环体  </span><br><span class="line">&#125; <span class="keyword">while</span> (循环条件) ;</span><br></pre></td></tr></table></figure>
@@ -394,8 +291,88 @@
       </tags>
   </entry>
   <entry>
+    <title></title>
+    <url>/2022/09/06/%E8%A1%A5%E5%85%85/</url>
+    <content><![CDATA[<h1 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h1><ol>
+<li>自动存储期限 从声明，到函数结束</li>
+<li>块作用域 {}</li>
+</ol>
+<h3 id="静态局部变量"><a href="#静态局部变量" class="headerlink" title="静态局部变量"></a>静态局部变量</h3><p>static 可以使函数拥有永久的存储单位，该程序运行期间一直保留其值,期限为整个程序运行期间<br>但其他函数无法访问它</p>
+<h3 id="形式参数同局部变量"><a href="#形式参数同局部变量" class="headerlink" title="形式参数同局部变量"></a>形式参数同局部变量</h3><h1 id="外部变量（全局变量）"><a href="#外部变量（全局变量）" class="headerlink" title="外部变量（全局变量）"></a>外部变量（全局变量）</h1><ol>
+<li>外部变量是声明在任何函数体之外的</li>
+<li>静态存储期限，</li>
+<li>文件作用域，作用域从声明开始到文件的末尾,一直可访问&#96;&#96;&#96;&#96;&#96;&#96;&#96;</li>
+</ol>
+<h3 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h3><ul>
+<li>压栈(push)：在栈顶加入一个数据项</li>
+<li>出栈(pop)：从栈顶删除一个数据项</li>
+</ul>
+<p>无法对不在栈顶的数据项进行修改</p>
+<h5 id="在C中实现栈"><a href="#在C中实现栈" class="headerlink" title="在C中实现栈"></a>在C中实现栈</h5><p><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sdbm412zj30sw0enqc9.jpg" alt="image.png"></p>
+<p>通过#if #ifdef来调试</p>
+<p><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tgx4557xj30sv0apacf.jpg" alt="image.png"></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">if</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">else</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">if</span> XXX</span></span><br><span class="line"><span class="meta">#<span class="keyword">elif</span> XX</span></span><br><span class="line"><span class="meta">#<span class="keyword">error</span> XXX</span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/09/06/%E7%AC%AC%E4%B9%9D%E7%AB%A0/</url>
+    <content><![CDATA[<h1 id="9-1-指针"><a href="#9-1-指针" class="headerlink" title="9.1 指针"></a>9.1 指针</h1><ul>
+<li><p>%p表示输出变量的地址 </p>
+</li>
+<li><p>&amp;取地址符，取出变量的地址</p>
+<p>地址的大小是否于int相等取决于编译器</p>
+</li>
+<li><h2 id="定义：就是保存地址的变量"><a href="#定义：就是保存地址的变量" class="headerlink" title="定义：就是保存地址的变量"></a>定义：就是保存地址的变量</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> *p,q;<span class="type">int</span> *p,q;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>两种语句都是表示只有p是指针，q是int</strong></p>
+</li>
+<li><h3 id="指针的作用：在代码块里面访问外面的变量"><a href="#指针的作用：在代码块里面访问外面的变量" class="headerlink" title="指针的作用：在代码块里面访问外面的变量"></a>指针的作用：在代码块里面访问外面的变量</h3><p>*加地址，可以访问地址上的变量(*是单目运算符)</p>
+<p>*p既可以给其他变量赋值，也可以被赋值</p>
+</li>
+</ul>
+<p>*<em>与&amp;互为逆运算</em></p>
+<ul>
+<li><p>传入函数的数组就是指针<br>sizeof(a) &#x3D;&#x3D; sizeof(int*)<br>但是这个指针可以 用运算符[]进行运算</p>
+<h3 id="数组变量是特殊的指针"><a href="#数组变量是特殊的指针" class="headerlink" title="数组变量是特殊的指针"></a>数组变量是特殊的指针</h3><ul>
+<li>数组变量 是 Const的指针</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> * <span class="type">const</span> p表示定义不可修改的指针</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> *p =&amp;i或者<span class="type">int</span> <span class="type">const</span> *p表示无法通过*p给所指变量赋值,</span><br><span class="line">而所指变量本身能被赋值,即*p = <span class="number">1</span>不可以; 而i =<span class="number">1</span>可以</span><br></pre></td></tr></table></figure>
+
+<p><em>const在*前，为第二种 ，在*后，为第一种</em></p>
+<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5s9yg12xvj30x80jwjvz.jpg" alt="image.png" style="zoom: 33%;" />
+
+<ul>
+<li>const 数组名表示数组里的元素全为const变量</li>
+</ul>
+<h1 id="9-2-指针运算"><a href="#9-2-指针运算" class="headerlink" title="9.2 指针运算"></a>9.2 指针运算</h1><p>指针+1移动到下一个储存变量的位置</p>
+<p>指针与指针相加减的结果是中间变量的个数</p>
+<ul>
+<li>*p++意思是取出p所指的数据，之后再把p移到下一个位置<br>*p++可以只对应一条汇编指令，使得程序跑得快</li>
+</ul>
+<p>指针比较:数组中的单元的地址是线性递增的<br><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sbj5weunj30qb0l2tdr.jpg" alt="image.png" style="zoom:50%;" /></p>
+<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sbn5a28sj30s90lngr3.jpg" alt="image.png" style="zoom: 33%;" />
+
+<p><em>数组名没法运算</em></p>
+<h1 id="指针的作用"><a href="#指针的作用" class="headerlink" title="指针的作用"></a>指针的作用</h1><ol>
+<li>传入较大数据作为参数</li>
+<li>传入数组后对数组做操作</li>
+<li>函数返回不止一个结果</li>
+<li>需要用函数来修改不止一个变量</li>
+<li><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sby415suj30re0k8gos.jpg" alt="image.png" style="zoom:50%;" />
+没空间会返回0
+***malloc之后一定要free***</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>第三章</title>
-    <url>/2022/08/02/%E7%AC%AC%E4%B8%89%E7%AB%A0/</url>
+    <url>/2022/09/06/%E7%AC%AC%E4%B8%89%E7%AB%A0/</url>
     <content><![CDATA[<h1 id="3-1-判断"><a href="#3-1-判断" class="headerlink" title="3.1 判断"></a>3.1 判断</h1><h3 id="关系运算的结果只有1（符合条件）和0（不符合条件"><a href="#关系运算的结果只有1（符合条件）和0（不符合条件" class="headerlink" title="关系运算的结果只有1（符合条件）和0（不符合条件)"></a>关系运算的结果只有1（符合条件）和0（不符合条件)</h3><p><img data-src="https://s2.loli.net/2022/08/03/m9k7nDOUCzWP3hA.png"></p>
 <p><img data-src="https://s2.loli.net/2022/08/03/YBfS7sFegkOLZoc.png"></p>
 <h3 id="else-总是与最近的if匹配"><a href="#else-总是与最近的if匹配" class="headerlink" title="else 总是与最近的if匹配"></a>else 总是与最近的if匹配</h3><h3 id="级联if"><a href="#级联if" class="headerlink" title="级联if"></a>级联if</h3><h1 id="3-2-分支"><a href="#3-2-分支" class="headerlink" title="3.2 分支"></a>3.2 分支</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span> (控制表达式)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">case</span> 常量:</span><br><span class="line">        语句;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>;</span><br><span class="line">        语句;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -418,7 +395,7 @@
   </entry>
   <entry>
     <title>第二章</title>
-    <url>/2022/08/01/%E7%AC%AC%E4%BA%8C%E7%AB%A0/</url>
+    <url>/2022/09/06/%E7%AC%AC%E4%BA%8C%E7%AB%A0/</url>
     <content><![CDATA[<h1 id="2-1-变量"><a href="#2-1-变量" class="headerlink" title="2.1 变量"></a>2.1 变量</h1><p>有效变量名满足的条件:</p>
 <ol>
 <li>不是关键字</li>
@@ -430,6 +407,29 @@
 <p><em>TIPs：输入scanf变量时记得加””&amp;””</em></p>
 <p>7*-9*10</p>
 <h1 id="2-2-表达式"><a href="#2-2-表达式" class="headerlink" title="2.2 表达式"></a>2.2 表达式</h1><h2 id="复合运算符-x3D-x3D-x3D-x2F-x3D"><a href="#复合运算符-x3D-x3D-x3D-x2F-x3D" class="headerlink" title="复合运算符 +&#x3D; -&#x3D; *&#x3D; &#x2F;&#x3D;"></a>复合运算符 +&#x3D; -&#x3D; *&#x3D; &#x2F;&#x3D;</h2><p><img data-src="https://s2.loli.net/2022/08/03/Tae2JjB7LCZE9gS.png"></p>
+]]></content>
+      <categories>
+        <category>C</category>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>C Learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第五章</title>
+    <url>/2022/09/06/%E7%AC%AC%E4%BA%94%E7%AB%A0/</url>
+    <content><![CDATA[<h1 id="5-1-第三种循环for"><a href="#5-1-第三种循环for" class="headerlink" title="5.1 第三种循环for"></a>5.1 第三种循环for</h1><h2 id="1-for-x3D-对于"><a href="#1-for-x3D-对于" class="headerlink" title="1) for &#x3D; 对于"></a>1) for &#x3D; 对于</h2><p><strong>例如:for(coun&#x3D;10;count&gt;0;count–)</strong></p>
+<p><strong>对于一开始的count&#x3D;10,判断条件，然后做循环体，做完后执行count–,之后再判断……</strong></p>
+<h6 id="TIPS-1-可以在for里面定义变量-该变量只在for中有用"><a href="#TIPS-1-可以在for里面定义变量-该变量只在for中有用" class="headerlink" title="TIPS:1. *可以在for里面定义变量,该变量只在for中有用*"></a>TIPS:1. *可以在for里面定义变量,<strong>该</strong>变量只在for中有用*</h6><h6 id="2-三个表达式中可以省略任意的表达式"><a href="#2-三个表达式中可以省略任意的表达式" class="headerlink" title="2. 三个表达式中可以省略任意的表达式"></a>2. <em>三个表达式中可以省略任意的表达式</em></h6><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(;表达式;)== <span class="keyword">while</span>(表达式)</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-for-amp-while-amp-do-while的选择"><a href="#2-for-amp-while-amp-do-while的选择" class="headerlink" title="2) for &amp;while &amp;do_while的选择"></a>2) for &amp;while &amp;do_while的选择</h2><p><img data-src="http://tva1.sinaimg.cn/large/008tG9v6gy1h5g27wgp4ej30oh08bq44.jpg" alt="image.png"></p>
+<h1 id="5-2循环控制"><a href="#5-2循环控制" class="headerlink" title="5.2循环控制"></a>5.2循环控制</h1><h2 id="1-用break-amp-continue控制循环"><a href="#1-用break-amp-continue控制循环" class="headerlink" title="1) 用break&amp;continue控制循环"></a>1) 用break&amp;continue控制循环</h2><p><strong>break:跳出循环</strong></p>
+<p><strong>continue:跳过循环这一轮的语句进入下一轮</strong></p>
+<h2 id="2-goto语句"><a href="#2-goto语句" class="headerlink" title="2)goto语句"></a>2)goto语句</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">goto</span> 标记;</span><br><span class="line">标记:</span><br><span class="line">	语句</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>TIPS:<em><strong>少用GOTO，goto是属于非线性的，用的多了，就会使得程序杂乱无章，难于阅读</strong></em></p>
+<p>​		(<em>有时候确实很好用，高效省事</em>)</p>
 ]]></content>
       <categories>
         <category>C</category>

@@ -23,29 +23,36 @@
     var CONFIG = {"hostname":"yangtaochao.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"livere","storage":true,"lazyload":true,"nav":null,"activeClass":"livere"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="10.1 字符串         %s输入输出字符串，输入时候读到空格tab或者回车为止   指针必须初始化 数组结构  10.2  字符串函数char *a[]   程序输入原理    strlen函数1strlen(数组名) 输出数组长度  strcpy函数">
+  <meta name="description" content="全局变量 										   ***_func_***代表当前函数的名称      静态本地变量        12.2 编译预处理和宏编译预处理 #开头的是编译预处理指令 #define 用来定义宏它们不是C语言的成分，但是C语言程序离不开它      预先定义的宏 __LINE__代表源代码文件的行号 _FILE_ 代表源代码文件的文件名（包含路径） _DATE_ 代表编译时日期 __T">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HarryYang的个人主页">
-<meta property="og:url" content="http://yangtaochao.github.io/2022/09/02/%E7%AC%AC%E5%8D%81%E7%AB%A0/index.html">
+<meta property="og:url" content="http://yangtaochao.github.io/2022/09/06/%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0/index.html">
 <meta property="og:site_name" content="HarryYang的个人主页">
-<meta property="og:description" content="10.1 字符串         %s输入输出字符串，输入时候读到空格tab或者回车为止   指针必须初始化 数组结构  10.2  字符串函数char *a[]   程序输入原理    strlen函数1strlen(数组名) 输出数组长度  strcpy函数">
+<meta property="og:description" content="全局变量 										   ***_func_***代表当前函数的名称      静态本地变量        12.2 编译预处理和宏编译预处理 #开头的是编译预处理指令 #define 用来定义宏它们不是C语言的成分，但是C语言程序离不开它      预先定义的宏 __LINE__代表源代码文件的行号 _FILE_ 代表源代码文件的文件名（包含路径） _DATE_ 代表编译时日期 __T">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sh6krharj30um0lrdkr.jpg">
-<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5shirp5e5j30tk0iodiw.jpg">
-<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5shn3c9nhj31820o5qb5.jpg">
-<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5shpiz4zpj30qb0m3n0d.jpg">
-<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5si1g1ijqj30t30k4gop.jpg">
-<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5si9g11sxj30zk1hn4ft.jpg">
-<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sihbxgdzj318k0hotey.jpg">
-<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5siwa7haaj31030p5jz5.jpg">
-<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5t70xsy9wj30vx0ktq5i.jpg">
-<meta property="article:published_time" content="2022-09-02T11:14:39.872Z">
-<meta property="article:modified_time" content="2022-09-03T05:18:36.425Z">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tmae3nj0j30pu0kadii.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tmettn1sj30r20iugoq.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tml7a5i8j30tr0lldka.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tmoqq42ej30ux0b4ju3.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tmsl26dzj30tj0jeadp.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tmter64wj30t90i7tbh.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tn5emyw1j30ss0k8jv6.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tn61grn8j30rd0ju416.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tnjytrywj30oi0jfq5x.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tnxy1jytj30tk0lfjvj.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tny83vkbj30q906zaav.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5to70fhzoj30sw0kzjwm.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5toa3qhx2j30t50lidkq.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tobqoc38j30t6070jtt.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5ton42lx7j30sy0j2ada.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tou5sfi6j30xb0hugvk.jpg">
+<meta property="article:published_time" content="2022-09-06T03:23:44.817Z">
+<meta property="article:modified_time" content="2022-09-03T12:42:11.111Z">
 <meta property="article:author" content="HarryYang">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sh6krharj30um0lrdkr.jpg">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tmae3nj0j30pu0kadii.jpg">
 
-<link rel="canonical" href="http://yangtaochao.github.io/2022/09/02/%E7%AC%AC%E5%8D%81%E7%AB%A0/">
+<link rel="canonical" href="http://yangtaochao.github.io/2022/09/06/%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0/">
 
 
 <script id="page-configurations">
@@ -203,7 +210,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yangtaochao.github.io/2022/09/02/%E7%AC%AC%E5%8D%81%E7%AB%A0/">
+    <link itemprop="mainEntityOfPage" href="http://yangtaochao.github.io/2022/09/06/%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -227,14 +234,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2022-09-02 19:14:39" itemprop="dateCreated datePublished" datetime="2022-09-02T19:14:39+08:00">2022-09-02</time>
+              <time title="创建时间：2022-09-06 11:23:44" itemprop="dateCreated datePublished" datetime="2022-09-06T11:23:44+08:00">2022-09-06</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-03 13:18:36" itemprop="dateModified" datetime="2022-09-03T13:18:36+08:00">2022-09-03</time>
+                <time title="修改时间：2022-09-03 20:42:11" itemprop="dateModified" datetime="2022-09-03T20:42:11+08:00">2022-09-03</time>
               </span>
 
           
@@ -250,7 +257,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>102</span>
+              <span>604</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -269,31 +276,95 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="10-1-字符串"><a href="#10-1-字符串" class="headerlink" title="10.1 字符串"></a>10.1 字符串</h1><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sh6krharj30um0lrdkr.jpg" alt="image.png" style="zoom: 33%;" />
-
-<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5shirp5e5j30tk0iodiw.jpg" alt="image.png" style="zoom:50%;" />
-
-<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5shn3c9nhj31820o5qb5.jpg" alt="image.png" style="zoom:33%;" />
-
-<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5shpiz4zpj30qb0m3n0d.jpg" alt="image.png" style="zoom:50%;" />
+        <h1 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h1><ul>
+<li><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tmae3nj0j30pu0kadii.jpg" alt="image.png" style="zoom: 33%;" />										
 
 <ul>
-<li><p>%s输入输出字符串，输入时候读到空格tab或者回车为止</p>
-<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5si1g1ijqj30t30k4gop.jpg" alt="image.png" style="zoom:50%;" />
-
-<p>指针必须初始化</p>
-<h2 id="数组结构"><a href="#数组结构" class="headerlink" title="数组结构"></a>数组结构</h2><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5si9g11sxj30zk1hn4ft.jpg" alt="image.png" style="zoom: 50%;" />
-
-<h1 id="10-2-字符串函数"><a href="#10-2-字符串函数" class="headerlink" title="10.2  字符串函数"></a>10.2  字符串函数</h1><h2 id="char-a"><a href="#char-a" class="headerlink" title="char *a[]"></a>char *a[]</h2><p><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sihbxgdzj318k0hotey.jpg" alt="image.png"></p>
+<li><h2 id="func-代表当前函数的名称"><a href="#func-代表当前函数的名称" class="headerlink" title="***_func_***代表当前函数的名称"></a>***_<em>func</em>_***代表当前函数的名称</h2></li>
+</ul>
 </li>
 </ul>
-<h2 id="程序输入原理"><a href="#程序输入原理" class="headerlink" title="程序输入原理"></a>程序输入原理</h2><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5siwa7haaj31030p5jz5.jpg" alt="image.png" style="zoom:50%;" />
+<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tmettn1sj30r20iugoq.jpg" alt="image.png" style="zoom: 33%;" />
 
+<h2 id="静态本地变量"><a href="#静态本地变量" class="headerlink" title="静态本地变量"></a>静态本地变量</h2><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tml7a5i8j30tr0lldka.jpg" alt="image.png" style="zoom: 33%;" />
 
+<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tmoqq42ej30ux0b4ju3.jpg" alt="image.png" style="zoom: 33%;" />
 
-<h2 id="strlen函数"><a href="#strlen函数" class="headerlink" title="strlen函数"></a>strlen函数</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">strlen</span>(数组名) 输出数组长度</span><br></pre></td></tr></table></figure>
+<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tmsl26dzj30tj0jeadp.jpg" alt="image.png" style="zoom: 33%;" />
 
-<h2 id="strcpy函数"><a href="#strcpy函数" class="headerlink" title="strcpy函数"></a>strcpy函数</h2><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5t70xsy9wj30vx0ktq5i.jpg" alt="image.png" style="zoom:50%;" />
+<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tmter64wj30t90i7tbh.jpg" alt="image.png" style="zoom: 33%;" />
+
+<h1 id="12-2-编译预处理和宏"><a href="#12-2-编译预处理和宏" class="headerlink" title="12.2 编译预处理和宏"></a>12.2 编译预处理和宏</h1><h2 id="编译预处理"><a href="#编译预处理" class="headerlink" title="编译预处理"></a>编译预处理</h2><ul>
+<li>#开头的是编译预处理指令</li>
+<li>#define 用来定义宏<br><em>它们不是C语言的成分，但是C语言程序离不开它</em></li>
+</ul>
+<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tn5emyw1j30ss0k8jv6.jpg" alt="image.png" style="zoom:33%;" />
+
+<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tn61grn8j30rd0ju416.jpg" alt="image.png" style="zoom:33%;" />
+
+<h3 id="预先定义的宏"><a href="#预先定义的宏" class="headerlink" title="预先定义的宏"></a>预先定义的宏</h3><ul>
+<li>__LINE__代表源代码文件的行号</li>
+<li>_<em>FILE</em>_ 代表源代码文件的文件名（包含路径）</li>
+<li>_<em>DATE</em>_ 代表编译时日期</li>
+<li>__TIME__代表编译时时间</li>
+<li>__STDC__代表</li>
+</ul>
+<h2 id="带参数的宏：仅仅只是文本的替换！！！"><a href="#带参数的宏：仅仅只是文本的替换！！！" class="headerlink" title="带参数的宏：仅仅只是文本的替换！！！"></a>带参数的宏：<em>仅仅只是文本的替换！！！</em></h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> cude(x) ((x)*(x)*(x))</span></span><br></pre></td></tr></table></figure>
+
+<p>cube(5)会被替换为((5)*(5)*(5))</p>
+<p>cube(i)会被替换为((i)*(i)*(i))</p>
+<h3 id="定义带参数宏的原则"><a href="#定义带参数宏的原则" class="headerlink" title="定义带参数宏的原则"></a>定义带参数宏的原则</h3><ul>
+<li><p>一切都要括号</p>
+<ul>
+<li>整个值要括号</li>
+<li>参数出现的每个地方都要括号</li>
+</ul>
+</li>
+<li><p>可以带多个参数</p>
+</li>
+<li><p>也可以嵌套宏</p>
+</li>
+<li><p>定义参数宏时不要带分号</p>
+</li>
+</ul>
+<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tnjytrywj30oi0jfq5x.jpg" alt="image.png" style="zoom:33%;" />
+
+<h1 id="12-3-大程序结构"><a href="#12-3-大程序结构" class="headerlink" title="12.3 大程序结构"></a>12.3 大程序结构</h1><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tnxy1jytj30tk0lfjvj.jpg" alt="image.png" style="zoom:33%;" />
+
+<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tny83vkbj30q906zaav.jpg" alt="image.png" style="zoom:33%;" />
+
+<h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><ul>
+<li>把函数原型放到一个头文件中，在需要调用这个函数的源代码文件中#include这个头文件，<br>就能让编译器在编译的时候知道函数的原型</li>
+</ul>
+<h2 id=""><a href="#" class="headerlink" title=""></a><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5to70fhzoj30sw0kzjwm.jpg" alt="image.png" style="zoom:33%;" /></h2><ul>
+<li>#include 是预处理指令，预处理时会进行文本替换</li>
+</ul>
+<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5toa3qhx2j30t50lidkq.jpg" alt="image.png" style="zoom:33%;" />
+
+<h3 id="头文件使用注意事项："><a href="#头文件使用注意事项：" class="headerlink" title="头文件使用注意事项："></a>头文件使用注意事项：</h3><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tobqoc38j30t6070jtt.jpg" alt="image.png" style="zoom:33%;" />
+
+<h4 id="不对外公开的函数"><a href="#不对外公开的函数" class="headerlink" title="不对外公开的函数"></a>不对外公开的函数</h4><ul>
+<li>在函数前面加上static就使得它只能在所在的编译单元中被使用搞的函数</li>
+<li>在全局变量前面加上static就使得它成为只能在所在的编译单元中被使用的全局变量</li>
+</ul>
+<h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extern</span> 类型名 名称；这是变量的声明，而非函数的定义</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>声明不产生代码<ul>
+<li>函数原型</li>
+<li>变量声明</li>
+<li>结构声明</li>
+<li>宏声明</li>
+<li>枚举声明</li>
+<li>类型声明</li>
+<li>inline函数</li>
+</ul>
+</li>
+<li>定义是产生代码的东西</li>
+</ul>
+<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5ton42lx7j30sy0j2ada.jpg" alt="image.png" style="zoom:33%;" />
+
+<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5tou5sfi6j30xb0hugvk.jpg" alt="image.png" style="zoom:33%;" />
 
 
     </div>
@@ -320,7 +391,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yangtaochao.github.io/2022/09/02/%E7%AC%AC%E5%8D%81%E7%AB%A0/" title="">http://yangtaochao.github.io/2022/09/02/第十章/</a>
+    <a href="http://yangtaochao.github.io/2022/09/06/%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0/" title="">http://yangtaochao.github.io/2022/09/06/第十二章/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -337,11 +408,11 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/09/02/%E8%A1%A5%E5%85%85/" rel="prev" title="">
-      <i class="fa fa-chevron-left"></i> 
+    <a href="/2022/09/06/%E7%AC%AC%E5%85%AD%E7%AB%A0/" rel="prev" title="第六章">
+      <i class="fa fa-chevron-left"></i> 第六章
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/09/03/%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0/" rel="next" title="">
+    <a href="/2022/09/06/%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0/" rel="next" title="">
        <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -407,7 +478,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#10-1-%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">1.</span> <span class="nav-text">10.1 字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E7%BB%93%E6%9E%84"><span class="nav-number">1.1.</span> <span class="nav-text">数组结构</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#10-2-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%87%BD%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text">10.2  字符串函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#char-a"><span class="nav-number">2.1.</span> <span class="nav-text">char *a[]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E8%BE%93%E5%85%A5%E5%8E%9F%E7%90%86"><span class="nav-number">2.2.</span> <span class="nav-text">程序输入原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#strlen%E5%87%BD%E6%95%B0"><span class="nav-number">2.3.</span> <span class="nav-text">strlen函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#strcpy%E5%87%BD%E6%95%B0"><span class="nav-number">2.4.</span> <span class="nav-text">strcpy函数</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="nav-number">1.</span> <span class="nav-text">全局变量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#func-%E4%BB%A3%E8%A1%A8%E5%BD%93%E5%89%8D%E5%87%BD%E6%95%B0%E7%9A%84%E5%90%8D%E7%A7%B0"><span class="nav-number">1.1.</span> <span class="nav-text">***_func_***代表当前函数的名称</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E6%9C%AC%E5%9C%B0%E5%8F%98%E9%87%8F"><span class="nav-number">1.2.</span> <span class="nav-text">静态本地变量</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#12-2-%E7%BC%96%E8%AF%91%E9%A2%84%E5%A4%84%E7%90%86%E5%92%8C%E5%AE%8F"><span class="nav-number">2.</span> <span class="nav-text">12.2 编译预处理和宏</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E9%A2%84%E5%A4%84%E7%90%86"><span class="nav-number">2.1.</span> <span class="nav-text">编译预处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%84%E5%85%88%E5%AE%9A%E4%B9%89%E7%9A%84%E5%AE%8F"><span class="nav-number">2.1.1.</span> <span class="nav-text">预先定义的宏</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%A6%E5%8F%82%E6%95%B0%E7%9A%84%E5%AE%8F%EF%BC%9A%E4%BB%85%E4%BB%85%E5%8F%AA%E6%98%AF%E6%96%87%E6%9C%AC%E7%9A%84%E6%9B%BF%E6%8D%A2%EF%BC%81%EF%BC%81%EF%BC%81"><span class="nav-number">2.2.</span> <span class="nav-text">带参数的宏：仅仅只是文本的替换！！！</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E5%B8%A6%E5%8F%82%E6%95%B0%E5%AE%8F%E7%9A%84%E5%8E%9F%E5%88%99"><span class="nav-number">2.2.1.</span> <span class="nav-text">定义带参数宏的原则</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#12-3-%E5%A4%A7%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84"><span class="nav-number">3.</span> <span class="nav-text">12.3 大程序结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="nav-number">3.1.</span> <span class="nav-text">头文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">3.2.</span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%B4%E6%96%87%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%EF%BC%9A"><span class="nav-number">3.2.1.</span> <span class="nav-text">头文件使用注意事项：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8D%E5%AF%B9%E5%A4%96%E5%85%AC%E5%BC%80%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">3.2.1.1.</span> <span class="nav-text">不对外公开的函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A3%B0%E6%98%8E"><span class="nav-number">3.3.</span> <span class="nav-text">声明</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
