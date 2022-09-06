@@ -2,6 +2,82 @@
 <search>
   <entry>
     <title></title>
+    <url>/2022/09/06/%E7%AC%AC%E4%B9%9D%E7%AB%A0/</url>
+    <content><![CDATA[<h1 id="9-1-指针"><a href="#9-1-指针" class="headerlink" title="9.1 指针"></a>9.1 指针</h1><ul>
+<li><p>%p表示输出变量的地址 </p>
+</li>
+<li><p>&amp;取地址符，取出变量的地址</p>
+<p>地址的大小是否于int相等取决于编译器</p>
+</li>
+<li><h2 id="定义：就是保存地址的变量"><a href="#定义：就是保存地址的变量" class="headerlink" title="定义：就是保存地址的变量"></a>定义：就是保存地址的变量</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> *p,q;<span class="type">int</span> *p,q;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>两种语句都是表示只有p是指针，q是int</strong></p>
+</li>
+<li><h3 id="指针的作用：在代码块里面访问外面的变量"><a href="#指针的作用：在代码块里面访问外面的变量" class="headerlink" title="指针的作用：在代码块里面访问外面的变量"></a>指针的作用：在代码块里面访问外面的变量</h3><p>*加地址，可以访问地址上的变量(*是单目运算符)</p>
+<p>*p既可以给其他变量赋值，也可以被赋值</p>
+</li>
+</ul>
+<p>*<em>与&amp;互为逆运算</em></p>
+<ul>
+<li><p>传入函数的数组就是指针<br>sizeof(a) &#x3D;&#x3D; sizeof(int*)<br>但是这个指针可以 用运算符[]进行运算</p>
+<h3 id="数组变量是特殊的指针"><a href="#数组变量是特殊的指针" class="headerlink" title="数组变量是特殊的指针"></a>数组变量是特殊的指针</h3><ul>
+<li>数组变量 是 Const的指针</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> * <span class="type">const</span> p表示定义不可修改的指针</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> *p =&amp;i或者<span class="type">int</span> <span class="type">const</span> *p表示无法通过*p给所指变量赋值,</span><br><span class="line">而所指变量本身能被赋值,即*p = <span class="number">1</span>不可以; 而i =<span class="number">1</span>可以</span><br></pre></td></tr></table></figure>
+
+<p><em>const在*前，为第二种 ，在*后，为第一种</em></p>
+<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5s9yg12xvj30x80jwjvz.jpg" alt="image.png" style="zoom: 33%;" />
+
+<ul>
+<li>const 数组名表示数组里的元素全为const变量</li>
+</ul>
+<h1 id="9-2-指针运算"><a href="#9-2-指针运算" class="headerlink" title="9.2 指针运算"></a>9.2 指针运算</h1><p>指针+1移动到下一个储存变量的位置</p>
+<p>指针与指针相加减的结果是中间变量的个数</p>
+<ul>
+<li>*p++意思是取出p所指的数据，之后再把p移到下一个位置<br>*p++可以只对应一条汇编指令，使得程序跑得快</li>
+</ul>
+<p>指针比较:数组中的单元的地址是线性递增的<br><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sbj5weunj30qb0l2tdr.jpg" alt="image.png" style="zoom:50%;" /></p>
+<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sbn5a28sj30s90lngr3.jpg" alt="image.png" style="zoom: 33%;" />
+
+<p><em>数组名没法运算</em></p>
+<h1 id="指针的作用"><a href="#指针的作用" class="headerlink" title="指针的作用"></a>指针的作用</h1><ol>
+<li>传入较大数据作为参数</li>
+<li>传入数组后对数组做操作</li>
+<li>函数返回不止一个结果</li>
+<li>需要用函数来修改不止一个变量</li>
+<li><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sby415suj30re0k8gos.jpg" alt="image.png" style="zoom:50%;" />
+没空间会返回0
+***malloc之后一定要free***</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>第三章</title>
+    <url>/2022/09/06/%E7%AC%AC%E4%B8%89%E7%AB%A0/</url>
+    <content><![CDATA[<h1 id="3-1-判断"><a href="#3-1-判断" class="headerlink" title="3.1 判断"></a>3.1 判断</h1><h3 id="关系运算的结果只有1（符合条件）和0（不符合条件"><a href="#关系运算的结果只有1（符合条件）和0（不符合条件" class="headerlink" title="关系运算的结果只有1（符合条件）和0（不符合条件)"></a>关系运算的结果只有1（符合条件）和0（不符合条件)</h3><p><img data-src="https://s2.loli.net/2022/08/03/m9k7nDOUCzWP3hA.png"></p>
+<p><img data-src="https://s2.loli.net/2022/08/03/YBfS7sFegkOLZoc.png"></p>
+<h3 id="else-总是与最近的if匹配"><a href="#else-总是与最近的if匹配" class="headerlink" title="else 总是与最近的if匹配"></a>else 总是与最近的if匹配</h3><h3 id="级联if"><a href="#级联if" class="headerlink" title="级联if"></a>级联if</h3><h1 id="3-2-分支"><a href="#3-2-分支" class="headerlink" title="3.2 分支"></a>3.2 分支</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span> (控制表达式)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">case</span> 常量:</span><br><span class="line">        语句;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>;</span><br><span class="line">        语句;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><h3 id="控制表达式中变量必须是整形"><a href="#控制表达式中变量必须是整形" class="headerlink" title="控制表达式中变量必须是整形"></a>控制表达式中变量必须是整形</h3></li>
+<li><h3 id="常量即常数和常数参与的表达式"><a href="#常量即常数和常数参与的表达式" class="headerlink" title="常量即常数和常数参与的表达式"></a>常量即常数和常数参与的表达式</h3></li>
+<li><p><img data-src="https://s2.loli.net/2022/08/12/ugLyS8h3PJAZrxH.png"></p>
+</li>
+<li></li>
+</ol>
+]]></content>
+      <categories>
+        <category>C</category>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>C Learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
     <url>/2022/09/06/%E7%AC%AC%E5%85%AB%E7%AB%A0/</url>
     <content><![CDATA[<h1 id="8-1-数组"><a href="#8-1-数组" class="headerlink" title="8.1 数组"></a>8.1 数组</h1><ul>
 <li>是一种容器（放东西的东西），特点是：</li>
@@ -10,6 +86,29 @@
 <li>（数据中的元素在内存中是连续依次排列的）</li>
 </ul>
 <h4 id="必须认为检查数组是否越界"><a href="#必须认为检查数组是否越界" class="headerlink" title="必须认为检查数组是否越界"></a>必须认为检查数组是否越界</h4>]]></content>
+  </entry>
+  <entry>
+    <title>第二章</title>
+    <url>/2022/09/06/%E7%AC%AC%E4%BA%8C%E7%AB%A0/</url>
+    <content><![CDATA[<h1 id="2-1-变量"><a href="#2-1-变量" class="headerlink" title="2.1 变量"></a>2.1 变量</h1><p>有效变量名满足的条件:</p>
+<ol>
+<li>不是关键字</li>
+<li>开头不能是数字</li>
+<li>只能由英文字母数字和下划线组成（不是-,而是_）</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">输入浮点数 <span class="built_in">scanf</span>(<span class="string">&quot;%lf&quot;</span>,&amp;a)</span><br><span class="line">输出浮点数 <span class="built_in">printf</span>(<span class="string">&quot;%f&quot;</span>,a)</span><br></pre></td></tr></table></figure>
+
+<p><em>TIPs：输入scanf变量时记得加””&amp;””</em></p>
+<p>7*-9*10</p>
+<h1 id="2-2-表达式"><a href="#2-2-表达式" class="headerlink" title="2.2 表达式"></a>2.2 表达式</h1><h2 id="复合运算符-x3D-x3D-x3D-x2F-x3D"><a href="#复合运算符-x3D-x3D-x3D-x2F-x3D" class="headerlink" title="复合运算符 +&#x3D; -&#x3D; *&#x3D; &#x2F;&#x3D;"></a>复合运算符 +&#x3D; -&#x3D; *&#x3D; &#x2F;&#x3D;</h2><p><img data-src="https://s2.loli.net/2022/08/03/Tae2JjB7LCZE9gS.png"></p>
+]]></content>
+      <categories>
+        <category>C</category>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>C Learning</tag>
+      </tags>
   </entry>
   <entry>
     <title></title>
@@ -291,6 +390,29 @@
       </tags>
   </entry>
   <entry>
+    <title>第五章</title>
+    <url>/2022/09/06/%E7%AC%AC%E4%BA%94%E7%AB%A0/</url>
+    <content><![CDATA[<h1 id="5-1-第三种循环for"><a href="#5-1-第三种循环for" class="headerlink" title="5.1 第三种循环for"></a>5.1 第三种循环for</h1><h2 id="1-for-x3D-对于"><a href="#1-for-x3D-对于" class="headerlink" title="1) for &#x3D; 对于"></a>1) for &#x3D; 对于</h2><p><strong>例如:for(coun&#x3D;10;count&gt;0;count–)</strong></p>
+<p><strong>对于一开始的count&#x3D;10,判断条件，然后做循环体，做完后执行count–,之后再判断……</strong></p>
+<h6 id="TIPS-1-可以在for里面定义变量-该变量只在for中有用"><a href="#TIPS-1-可以在for里面定义变量-该变量只在for中有用" class="headerlink" title="TIPS:1. *可以在for里面定义变量,该变量只在for中有用*"></a>TIPS:1. *可以在for里面定义变量,<strong>该</strong>变量只在for中有用*</h6><h6 id="2-三个表达式中可以省略任意的表达式"><a href="#2-三个表达式中可以省略任意的表达式" class="headerlink" title="2. 三个表达式中可以省略任意的表达式"></a>2. <em>三个表达式中可以省略任意的表达式</em></h6><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(;表达式;)== <span class="keyword">while</span>(表达式)</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-for-amp-while-amp-do-while的选择"><a href="#2-for-amp-while-amp-do-while的选择" class="headerlink" title="2) for &amp;while &amp;do_while的选择"></a>2) for &amp;while &amp;do_while的选择</h2><p><img data-src="http://tva1.sinaimg.cn/large/008tG9v6gy1h5g27wgp4ej30oh08bq44.jpg" alt="image.png"></p>
+<h1 id="5-2循环控制"><a href="#5-2循环控制" class="headerlink" title="5.2循环控制"></a>5.2循环控制</h1><h2 id="1-用break-amp-continue控制循环"><a href="#1-用break-amp-continue控制循环" class="headerlink" title="1) 用break&amp;continue控制循环"></a>1) 用break&amp;continue控制循环</h2><p><strong>break:跳出循环</strong></p>
+<p><strong>continue:跳过循环这一轮的语句进入下一轮</strong></p>
+<h2 id="2-goto语句"><a href="#2-goto语句" class="headerlink" title="2)goto语句"></a>2)goto语句</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">goto</span> 标记;</span><br><span class="line">标记:</span><br><span class="line">	语句</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>TIPS:<em><strong>少用GOTO，goto是属于非线性的，用的多了，就会使得程序杂乱无章，难于阅读</strong></em></p>
+<p>​		(<em>有时候确实很好用，高效省事</em>)</p>
+]]></content>
+      <categories>
+        <category>C</category>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>C Learning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title></title>
     <url>/2022/09/06/%E8%A1%A5%E5%85%85/</url>
     <content><![CDATA[<h1 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h1><ol>
@@ -316,127 +438,5 @@
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">if</span> XXX</span></span><br><span class="line"><span class="meta">#<span class="keyword">elif</span> XX</span></span><br><span class="line"><span class="meta">#<span class="keyword">error</span> XXX</span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure>
 
 ]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/09/06/%E7%AC%AC%E4%B9%9D%E7%AB%A0/</url>
-    <content><![CDATA[<h1 id="9-1-指针"><a href="#9-1-指针" class="headerlink" title="9.1 指针"></a>9.1 指针</h1><ul>
-<li><p>%p表示输出变量的地址 </p>
-</li>
-<li><p>&amp;取地址符，取出变量的地址</p>
-<p>地址的大小是否于int相等取决于编译器</p>
-</li>
-<li><h2 id="定义：就是保存地址的变量"><a href="#定义：就是保存地址的变量" class="headerlink" title="定义：就是保存地址的变量"></a>定义：就是保存地址的变量</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> *p,q;<span class="type">int</span> *p,q;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>两种语句都是表示只有p是指针，q是int</strong></p>
-</li>
-<li><h3 id="指针的作用：在代码块里面访问外面的变量"><a href="#指针的作用：在代码块里面访问外面的变量" class="headerlink" title="指针的作用：在代码块里面访问外面的变量"></a>指针的作用：在代码块里面访问外面的变量</h3><p>*加地址，可以访问地址上的变量(*是单目运算符)</p>
-<p>*p既可以给其他变量赋值，也可以被赋值</p>
-</li>
-</ul>
-<p>*<em>与&amp;互为逆运算</em></p>
-<ul>
-<li><p>传入函数的数组就是指针<br>sizeof(a) &#x3D;&#x3D; sizeof(int*)<br>但是这个指针可以 用运算符[]进行运算</p>
-<h3 id="数组变量是特殊的指针"><a href="#数组变量是特殊的指针" class="headerlink" title="数组变量是特殊的指针"></a>数组变量是特殊的指针</h3><ul>
-<li>数组变量 是 Const的指针</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> * <span class="type">const</span> p表示定义不可修改的指针</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> *p =&amp;i或者<span class="type">int</span> <span class="type">const</span> *p表示无法通过*p给所指变量赋值,</span><br><span class="line">而所指变量本身能被赋值,即*p = <span class="number">1</span>不可以; 而i =<span class="number">1</span>可以</span><br></pre></td></tr></table></figure>
-
-<p><em>const在*前，为第二种 ，在*后，为第一种</em></p>
-<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5s9yg12xvj30x80jwjvz.jpg" alt="image.png" style="zoom: 33%;" />
-
-<ul>
-<li>const 数组名表示数组里的元素全为const变量</li>
-</ul>
-<h1 id="9-2-指针运算"><a href="#9-2-指针运算" class="headerlink" title="9.2 指针运算"></a>9.2 指针运算</h1><p>指针+1移动到下一个储存变量的位置</p>
-<p>指针与指针相加减的结果是中间变量的个数</p>
-<ul>
-<li>*p++意思是取出p所指的数据，之后再把p移到下一个位置<br>*p++可以只对应一条汇编指令，使得程序跑得快</li>
-</ul>
-<p>指针比较:数组中的单元的地址是线性递增的<br><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sbj5weunj30qb0l2tdr.jpg" alt="image.png" style="zoom:50%;" /></p>
-<img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sbn5a28sj30s90lngr3.jpg" alt="image.png" style="zoom: 33%;" />
-
-<p><em>数组名没法运算</em></p>
-<h1 id="指针的作用"><a href="#指针的作用" class="headerlink" title="指针的作用"></a>指针的作用</h1><ol>
-<li>传入较大数据作为参数</li>
-<li>传入数组后对数组做操作</li>
-<li>函数返回不止一个结果</li>
-<li>需要用函数来修改不止一个变量</li>
-<li><img data-src="https://tva1.sinaimg.cn/large/008tG9v6ly1h5sby415suj30re0k8gos.jpg" alt="image.png" style="zoom:50%;" />
-没空间会返回0
-***malloc之后一定要free***</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
-    <title>第三章</title>
-    <url>/2022/09/06/%E7%AC%AC%E4%B8%89%E7%AB%A0/</url>
-    <content><![CDATA[<h1 id="3-1-判断"><a href="#3-1-判断" class="headerlink" title="3.1 判断"></a>3.1 判断</h1><h3 id="关系运算的结果只有1（符合条件）和0（不符合条件"><a href="#关系运算的结果只有1（符合条件）和0（不符合条件" class="headerlink" title="关系运算的结果只有1（符合条件）和0（不符合条件)"></a>关系运算的结果只有1（符合条件）和0（不符合条件)</h3><p><img data-src="https://s2.loli.net/2022/08/03/m9k7nDOUCzWP3hA.png"></p>
-<p><img data-src="https://s2.loli.net/2022/08/03/YBfS7sFegkOLZoc.png"></p>
-<h3 id="else-总是与最近的if匹配"><a href="#else-总是与最近的if匹配" class="headerlink" title="else 总是与最近的if匹配"></a>else 总是与最近的if匹配</h3><h3 id="级联if"><a href="#级联if" class="headerlink" title="级联if"></a>级联if</h3><h1 id="3-2-分支"><a href="#3-2-分支" class="headerlink" title="3.2 分支"></a>3.2 分支</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span> (控制表达式)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">case</span> 常量:</span><br><span class="line">        语句;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>;</span><br><span class="line">        语句;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li><h3 id="控制表达式中变量必须是整形"><a href="#控制表达式中变量必须是整形" class="headerlink" title="控制表达式中变量必须是整形"></a>控制表达式中变量必须是整形</h3></li>
-<li><h3 id="常量即常数和常数参与的表达式"><a href="#常量即常数和常数参与的表达式" class="headerlink" title="常量即常数和常数参与的表达式"></a>常量即常数和常数参与的表达式</h3></li>
-<li><p><img data-src="https://s2.loli.net/2022/08/12/ugLyS8h3PJAZrxH.png"></p>
-</li>
-<li></li>
-</ol>
-]]></content>
-      <categories>
-        <category>C</category>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>C Learning</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第二章</title>
-    <url>/2022/09/06/%E7%AC%AC%E4%BA%8C%E7%AB%A0/</url>
-    <content><![CDATA[<h1 id="2-1-变量"><a href="#2-1-变量" class="headerlink" title="2.1 变量"></a>2.1 变量</h1><p>有效变量名满足的条件:</p>
-<ol>
-<li>不是关键字</li>
-<li>开头不能是数字</li>
-<li>只能由英文字母数字和下划线组成（不是-,而是_）</li>
-</ol>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">输入浮点数 <span class="built_in">scanf</span>(<span class="string">&quot;%lf&quot;</span>,&amp;a)</span><br><span class="line">输出浮点数 <span class="built_in">printf</span>(<span class="string">&quot;%f&quot;</span>,a)</span><br></pre></td></tr></table></figure>
-
-<p><em>TIPs：输入scanf变量时记得加””&amp;””</em></p>
-<p>7*-9*10</p>
-<h1 id="2-2-表达式"><a href="#2-2-表达式" class="headerlink" title="2.2 表达式"></a>2.2 表达式</h1><h2 id="复合运算符-x3D-x3D-x3D-x2F-x3D"><a href="#复合运算符-x3D-x3D-x3D-x2F-x3D" class="headerlink" title="复合运算符 +&#x3D; -&#x3D; *&#x3D; &#x2F;&#x3D;"></a>复合运算符 +&#x3D; -&#x3D; *&#x3D; &#x2F;&#x3D;</h2><p><img data-src="https://s2.loli.net/2022/08/03/Tae2JjB7LCZE9gS.png"></p>
-]]></content>
-      <categories>
-        <category>C</category>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>C Learning</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第五章</title>
-    <url>/2022/09/06/%E7%AC%AC%E4%BA%94%E7%AB%A0/</url>
-    <content><![CDATA[<h1 id="5-1-第三种循环for"><a href="#5-1-第三种循环for" class="headerlink" title="5.1 第三种循环for"></a>5.1 第三种循环for</h1><h2 id="1-for-x3D-对于"><a href="#1-for-x3D-对于" class="headerlink" title="1) for &#x3D; 对于"></a>1) for &#x3D; 对于</h2><p><strong>例如:for(coun&#x3D;10;count&gt;0;count–)</strong></p>
-<p><strong>对于一开始的count&#x3D;10,判断条件，然后做循环体，做完后执行count–,之后再判断……</strong></p>
-<h6 id="TIPS-1-可以在for里面定义变量-该变量只在for中有用"><a href="#TIPS-1-可以在for里面定义变量-该变量只在for中有用" class="headerlink" title="TIPS:1. *可以在for里面定义变量,该变量只在for中有用*"></a>TIPS:1. *可以在for里面定义变量,<strong>该</strong>变量只在for中有用*</h6><h6 id="2-三个表达式中可以省略任意的表达式"><a href="#2-三个表达式中可以省略任意的表达式" class="headerlink" title="2. 三个表达式中可以省略任意的表达式"></a>2. <em>三个表达式中可以省略任意的表达式</em></h6><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(;表达式;)== <span class="keyword">while</span>(表达式)</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-for-amp-while-amp-do-while的选择"><a href="#2-for-amp-while-amp-do-while的选择" class="headerlink" title="2) for &amp;while &amp;do_while的选择"></a>2) for &amp;while &amp;do_while的选择</h2><p><img data-src="http://tva1.sinaimg.cn/large/008tG9v6gy1h5g27wgp4ej30oh08bq44.jpg" alt="image.png"></p>
-<h1 id="5-2循环控制"><a href="#5-2循环控制" class="headerlink" title="5.2循环控制"></a>5.2循环控制</h1><h2 id="1-用break-amp-continue控制循环"><a href="#1-用break-amp-continue控制循环" class="headerlink" title="1) 用break&amp;continue控制循环"></a>1) 用break&amp;continue控制循环</h2><p><strong>break:跳出循环</strong></p>
-<p><strong>continue:跳过循环这一轮的语句进入下一轮</strong></p>
-<h2 id="2-goto语句"><a href="#2-goto语句" class="headerlink" title="2)goto语句"></a>2)goto语句</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">goto</span> 标记;</span><br><span class="line">标记:</span><br><span class="line">	语句</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>TIPS:<em><strong>少用GOTO，goto是属于非线性的，用的多了，就会使得程序杂乱无章，难于阅读</strong></em></p>
-<p>​		(<em>有时候确实很好用，高效省事</em>)</p>
-]]></content>
-      <categories>
-        <category>C</category>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>C Learning</tag>
-      </tags>
   </entry>
 </search>
